@@ -15,17 +15,24 @@ class RamadhanApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Aplikasi Ramadhan'),
+          title: Text('Aplikasi Ramadhan Layout'),
         ),
-        body: Center(
-          child: Text(
-            "ini aplikasi ramadhan",
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: "347AF0".toColor() //Color(0XFF347AF0)
-            ),
-          ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Text kolom 1"),
+            Text("Text kolom 2"),
+            Text("Text kolom 3"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Text row 1"),
+                Text("Text row 2"),
+                Text("Text row 3"),
+              ],
+            )
+          ],
         ),
       ),
     );
